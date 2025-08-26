@@ -41,7 +41,7 @@ class JokeSeeder extends Seeder
         $users = User::all()->pluck('id', 'id')->toArray();
 
         foreach ($seedJokes as $seedJoke) {
-            $categoryList = $seedJoke['categories'] ?? 'Unknown';
+            $categoryList = $seedJoke['categories'] ?? ['Unknown'];
             unset($seedJoke['categories']);
 
             $joke = Joke::updateOrCreate([

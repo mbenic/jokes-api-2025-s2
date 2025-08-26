@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title'); // required
             $table->text('content')->nullable();
             $table->foreignId('user_id')->constrained('users');
-
+            // $table->foreignIdFor(User::class)->constrained('users'); same as above
             $table->dateTime('published_at')->nullable();
 
             $table->timestamps();

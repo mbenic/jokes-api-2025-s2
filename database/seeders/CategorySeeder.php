@@ -42,5 +42,11 @@ class CategorySeeder extends Seeder
         foreach ($seedCategories as $seedCategory) {
             Category::create($seedCategory);
         }
+
+       // Category::factory(10)->create();
+        // Create 10 random categories using the factory
+        // This will generate random titles and descriptions
+        // based on the factory definition
+        // and insert them into the database.
     }
 }

@@ -39,18 +39,18 @@
                             Suspended
                         </td>
                         <td class="px-3 py-1 whitespace-nowrap w-1/8">
-                            <form action="{{ route('admin.users', $user) }}"
+                            <form action="{{ route('admin.users.index', $user) }}"
                                   method="post"
                             class="grid grid-cols-3 gap-2 w-full">
                                 @csrf
                                 @method('delete')
 
-                                <a href="{{ route('admin.users', $user) }}"
+                                <a href="{{ route('admin.users.index', $user) }}"
                                    class="hover:text-green-500 transition border p-2 text-center rounded">
                                     <i class="fa-solid fa-user-tag"></i>
                                 </a>
 
-                                <a href="{{ route('admin.users', $user) }}"
+                                <a href="{{ route('admin.users.index', $user) }}"
                                    class="hover:text-blue-500 transition border p-2 text-center rounded">
                                     <i class="fa-solid fa-user-cog"></i>
                                 </a>
